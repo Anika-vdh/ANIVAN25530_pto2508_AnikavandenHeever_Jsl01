@@ -17,9 +17,29 @@ body {
 
 
 nav {
-  background: #2b2c37;
-  color: white;
+  background: #ffffff;
+  color: #000112;
   padding: 24px;
+  border-right: 1px solid #e4ebfa;
+}
+
+nav h4 {
+  color: #828fa3;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+nav button {
+  width: 100%;
+  border: none;
+  background: #635fc7;
+  color: #ffffff;
+  padding: 12px 14px;
+  border-radius: 24px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
 }
 
 .app > div {
@@ -36,4 +56,9 @@ header {
 
 main {
   padding: 24px;
+}
+
+.logo {
+  height: 30px;
+  margin-bottom: 32px;
 }
