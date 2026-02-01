@@ -1,3 +1,8 @@
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +27,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+font-family: "Plus Jakarta Sans", Arial, sans-serif;
   background: var(--bg);
   color: var(--black);
 }
@@ -39,7 +44,7 @@ nav {
 background: var(--white);
   color: var(--black);
   padding: 24px;
-  border-right: 1px solid #e4ebfa;
+border-right: 1px solid var(--lines);
 }
 
 nav h4 {
@@ -64,7 +69,7 @@ nav button {
 .app > div {
   display: flex;
   flex-direction: column;
-  background: #f4f7fd;
+  background: var(--bg);
 }
 
 header {
@@ -83,7 +88,7 @@ header {
 
 main {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   align-items: flex-start;
   padding: 24px;
 }
@@ -96,7 +101,7 @@ main > div > div:first-child {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 
@@ -126,21 +131,45 @@ main > div:nth-child(3) span {
 main > div > div:first-child h4 {
   font-size: 12px;
   letter-spacing: 1px;
+  font-weight: 700;
   color: var(--grey);
+  text-transform: uppercase;
 }
 
 /* ===== TASK CARDS ===== */
-main > div > div:nth-child(2) > div {
-  background: var(--white);
-  border-radius: 8px;
-  padding: 16px;
-  font-weight: 700;
-  font-size: 14px;
-  box-shadow: 0 4px 6px rgba(54, 78, 126, 0.1);
-}
-
-main > div > div:nth-child(2) {
+main > div > div:last-child {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+main > div > div:last-child > div {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(54, 78, 126, 0.12);
+}
+
+@media (max-width: 768px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  main > div {
+    width: 100%;
+  }
+}
+
+.app > div > div {
+  padding-top: 8px;
 }
